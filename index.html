@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 9: The Employee Management Application</title>
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <style>
+        .card           {border: 1px solid black;}
+        output          {font-size: 0.6em;}
+    </style>
+</head>
+<body>
+    <header id="main-header" class="bg-dark text-white p-4 mb-3">
+        <div class="container-fluid">
+            <h1 class="header-title">The Employee Management Application</h1>
+        </div>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4 col-md-12 mb-4">
+                <div class="card card-body">
+                    <h2 class="title mb-4">Add Employee</h2>
+                    <form action="" id="addForm">
+                        <label for="id">8-Digit Employee ID</label><br>
+                        <input type="text" maxlength="8" required id="id" class="form-control">
+                        
+                        <label for="name">Full Name</label><br>
+                        <input type="text" required id="name" class="form-control"><br>
+                        
+                        <label for="extension">4-Digit Extension</label><br>
+                        <input type="text" maxlength="4" required id="extension" class="form-control"><br>
+                
+                        <label for="email">Email</label><br>
+                        <input type="email" required id="email" class="form-control"><br>
+                        
+                        <label for="department">Department</label><br>
+                        <select id="department" required class="form-control">
+                            <option value="Administrative">Administrative</option>
+                            <option value="Engineering">Engineering</option>
+                            <option value="Executive">Executive</option>
+                            <option value="Marketing">Marketing</option>
+                            <option value="QA">Quality Assurance</option>
+                            <option value="Sales">Sales</option>
+                        </select><br>
+        
+                        <input type="submit" class="btn btn-dark" value="Add Employee">
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-12">
+                <div class="card card-body">
+                    <h2 class="title mb-4">Employees <output id="empCount"></output></h2>
+                    <table id="empTable" class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Ext</th>
+                                <th>Email</th>
+                                <th>Department</th>
+                                <th>&nbsp;</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
